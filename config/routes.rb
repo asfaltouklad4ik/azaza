@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 Organizer::Application.routes.draw do
   devise_for :users
+=======
+TaskManager::Application.routes.draw do
+  get "welcome/index"
+>>>>>>> 1f1db5b1b82a0d0e1ce7051a99a4b8e350be6cd8
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

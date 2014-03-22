@@ -2,10 +2,18 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+<<<<<<< HEAD
 gem 'devise'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
+=======
+
+# Use sqlite3 as the database for Active Record
+gem 'pg'
+
+gem 'activerecord'
+>>>>>>> 1f1db5b1b82a0d0e1ce7051a99a4b8e350be6cd8
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -38,6 +46,11 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1f1db5b1b82a0d0e1ce7051a99a4b8e350be6cd8
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 

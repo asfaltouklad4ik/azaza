@@ -6,7 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+<<<<<<< HEAD
 module Organizer
+=======
+module TaskManager
+>>>>>>> 1f1db5b1b82a0d0e1ce7051a99a4b8e350be6cd8
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

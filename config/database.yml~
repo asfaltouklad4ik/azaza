@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 development:
   adapter: postgresql
   encoding: unicode
@@ -21,10 +22,33 @@ development:
   # The server defaults to notice.
   #min_messages: warning
  
+=======
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+
+local: &local
+  adapter: postgresql
+  username: azaza
+  password: pwd
+  host: localhost
+
+
+
+
+development:
+  <<: *local
+  database: organizer_dev
+
+
+>>>>>>> 1f1db5b1b82a0d0e1ce7051a99a4b8e350be6cd8
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+<<<<<<< HEAD
   adapter: postgresql
   encoding: unicode
   database: daybook_test
@@ -39,3 +63,12 @@ production:
   pool: 5
   username: postgres
   password:
+=======
+  <<: *local
+  database: organizer_test
+
+
+production:
+  <<: *local
+  database: organizer_production
+>>>>>>> 1f1db5b1b82a0d0e1ce7051a99a4b8e350be6cd8
