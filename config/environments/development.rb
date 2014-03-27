@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 Organizer::Application.configure do
-=======
-TaskManager::Application.configure do
->>>>>>> 1f1db5b1b82a0d0e1ce7051a99a4b8e350be6cd8
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
