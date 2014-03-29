@@ -4,8 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
+gem 'pg'
+gem 'devise'
+gem 'activerecord'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -37,6 +38,22 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-remote'
+  gem 'factory_girl_rails'
+  gem 'faker', '~> 1.2.0'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'database_cleaner', '1.0.0.RC1'
+  gem 'shoulda-matchers'
+  gem 'webmock'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
