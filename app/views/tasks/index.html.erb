@@ -1,0 +1,20 @@
+<h1>Tasklist</h1>
+
+<%= link_to 'Create new task', new_task_path %>
+ 
+<table>
+  <tr>
+    <th>Here is the list of my homework tasks for Ruby-bursa courses.</th>
+  </tr>
+ 
+  <% @task.each do |task| %>
+    <tr>
+      <td><%= task.name %></td>
+      <td><%= task.category %></td>
+      <td><%= link_to 'Show', task %></td>
+    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+    <td><%= link_to 'Delete', task_path(task),
+                    method: :delete, data: { confirm: 'Tu uveren?' } %></td>
+    </tr>
+  <% end %>
+</table>

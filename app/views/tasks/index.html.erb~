@@ -1,0 +1,15 @@
+<h1>Tasklist</h1>
+ 
+<table>
+  <tr>
+    <th>All tasks</th>
+    <th>Here is the list of my homework tasks for Ruby-bursa</th>
+  </tr>
+ 
+  <% @task.each do |task| %>
+    <tr>
+      <td><%= task.name %></td>
+      <td><%= task.category %></td>
+    </tr>
+  <% end %>
+</table>

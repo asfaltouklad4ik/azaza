@@ -1,0 +1,7 @@
+<%= simple_form_for Task.new, url: tasks_path do |f| %>              
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.association :category %>
+  <%= f.button :submit %>
+<% end %>
+<%= link_to 'Go back', tasks_path %>

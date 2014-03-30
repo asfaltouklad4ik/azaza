@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @task.name %>
+</p>
+ 
+ <p>
+  <strong>Description:</strong>
+  <%= @task.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @task.category %>
+</p>
+
+
+<%= link_to 'Go back', tasks_path %>    or    <%= link_to 'Edit', edit_task_path(@task) %>
