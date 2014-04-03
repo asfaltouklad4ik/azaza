@@ -1,7 +1,10 @@
-<%= simple_form_for Task.new, url: tasks_path do |f| %>              
+<%= simple_form_for Task.new, html: {class: 'form-horizontal' }, url: tasks_path do |f| %>              
   <%= f.input :name %>
-  <%= f.input :description %>
+  <%= f.input :time_in %>
+  <%= f.input :time_out %>
+  <%= f.input :textdescription %>
   <%= f.association :category %>
+  <%= f.input :priority %>
   <%= f.button :submit %>
 <% end %>
 <%= link_to 'Go back', tasks_path %>

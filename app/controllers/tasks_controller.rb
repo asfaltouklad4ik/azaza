@@ -5,11 +5,11 @@ class TasksController < ApplicationController
   end
 
     def index
-     @task = Task.all
-    end
+     @tasks = Task.all
+      end
 
       def create
-        @task = Task.new(params[:task].permit(:name, :description, :category))
+        @task = Task.new(params[:task].permit(:name, :textdescription, :category, :priority))
           if @task.save
             redirect_to @task
           else
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
 
               def update
                 @task = Task.find(params[:id])
-                  if @task.update(params[:task].permit(:name, :description, :category))
+                  if @task.update(params[:task].permit(:name, :textdescription, :category, :priority))
                     redirect_to @task
                   else 
                     render 'edit'
@@ -42,7 +42,7 @@ class TasksController < ApplicationController
 
                   private
                     def task_params
-                      params.require(:task).permit(:name, :description, :category)
+                      params.require(:task).permit(:name, :textdescription, :category, :priority)
                     end
    
 end
