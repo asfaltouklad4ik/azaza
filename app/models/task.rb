@@ -2,8 +2,7 @@ class Task < ActiveRecord::Base
   belongs_to :category
   has_many :assignments
   has_many :users, through: :assignments
-  validates :name, :presence => {:message => 'Need username'}
-  validates :textdescription, :presence => {:message => 'Need description'}
+  validates :name, :textdescription, presence: true
   validates_length_of :textdescription,
     :minimum   => 10,
     :maximum   => 500,

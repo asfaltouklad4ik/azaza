@@ -1,13 +1,8 @@
-<h1>First attempt</h1>
-<p>Task-manager/organizer</p>
-
-
-<h1><%= link_to "Task-manager", controller: "tasks" %></h1>
-
-
+<p>Task-manager/organizer by G-man&Bush v. 0.0.2</p>
+<h1><%= link_to "Менеджер задач", controller: "tasks" %></h1>
 <% if user_signed_in? %>
     <span>Здравствуйте, <%= current_user.email %></span>
-    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+    <%= link_to 'Выйти', destroy_user_session_path, :method => :DELETE %>
 <% else %>
-    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+    <p>Войдите или зарегистрируйтесь</p>
 <% end %>

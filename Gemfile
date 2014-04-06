@@ -4,12 +4,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'simple_form'
 gem 'rails_admin'
-gem 'dynamic_form'
-gem 'jquery-validation-rails'
+#gem 'dynamic_form'
+#gem 'jquery-validation-rails'
+gem 'cancancan'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-gem 'pg'
 gem 'devise'
 gem 'activerecord'
 # Use SCSS for stylesheets
