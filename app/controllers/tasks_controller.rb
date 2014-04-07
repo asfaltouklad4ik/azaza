@@ -1,8 +1,6 @@
 class TasksController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource param_method: :task_params
     #def discontinue
-    # Automatically does the following:
-    # @product = Task.find(params[:id])
     # authorize! :discontinue, @task
     #end
     def new 
@@ -14,7 +12,7 @@ class TasksController < ApplicationController
     end
 
     def create
-      @task = Task.new(params[:task].permit(:id, :name, :textdescription, :category, :priority, :time_in, :time_out))
+      @task = Task.new(task_params)
         if @task.save
           redirect_to @task
         else
@@ -23,17 +21,14 @@ class TasksController < ApplicationController
     end
        
     def show
-      @task = Task.find(params[:id])
     end
         
     def edit
       authorize! :edit, @task
-      @task = Task.find(params[:id])
     end
 
     def update
-      @task = Task.find(params[:id])
-        if @task.update(params[:task].permit(:name, :textdescription, :category, :priority, :time_in, :time_out))
+        if @task.update(task_params)
           redirect_to @task
         else 
           render 'edit'
@@ -41,7 +36,6 @@ class TasksController < ApplicationController
     end
 
     def destroy
-      @task = Task.find(params[:id])
       @task.destroy
       redirect_to tasks_path
     end
