@@ -1,0 +1,30 @@
+<h1>Editing task</h1>
+ 
+<%= simple_form_for :task, url: task_path(@task), method: :patch do |f| %>
+  <% if @task.errors.any? %>
+  <div id="azaza  error  azazaz">
+    <h2><%= pluralize(@task.errors.count, "error") %> prohibited
+        this post from being saved:</h2>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :test %><br>
+    <%= f.text_area :textdescription %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Go back', tasks_path %>

@@ -2,9 +2,14 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+gem 'simple_form'
+gem 'rails_admin'
+#gem 'dynamic_form'
+#gem 'jquery-validation-rails'
+gem 'cancancan'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 gem 'devise'
 gem 'activerecord'
 # Use SCSS for stylesheets

@@ -1,0 +1,32 @@
+<p>
+	
+  <strong>Title:</strong>
+  <%= @task.name %>
+</p>
+ 
+ <p>
+  <strong>Description:</strong>
+  <%= @task.textdescription %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @task.category %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @task.priority %>
+</p>
+
+<p>
+  <strong>Time_in:</strong>
+  <%= @task.time_in %>
+</p>
+
+<p>
+  <strong>Time_out:</strong>
+  <%= @task.time_out %>
+</p>
+
+<%= link_to 'Go back', tasks_path %>    or    <%= link_to 'Edit', edit_task_path(@task) %>
