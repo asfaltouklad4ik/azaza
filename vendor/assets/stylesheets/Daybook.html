@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/tasks -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="http://localhost:3000/path/to/font-awesome/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daybook</title>
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="B/jJrZjnc9fhZTBoekXHfoz7h6M4OBoDJLfr+4tk0mk=" name="csrf-token">
+    <link data-turbolinks-track="true" href="http://localhost:3000/assets/application.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/bootstrap.min.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/bootstrap1.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/categories.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/custom.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/tasks.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/users.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/welcome.css?body=1" media="all" rel="stylesheet">
+    <script data-turbolinks-track="true" src="./Daybook_files/jquery.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/jquery_ujs.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/turbolinks.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/categories.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/tasks.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/users.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/welcome.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/bootstrap.min.js"></script>
+<script data-turbolinks-track="true" src="./Daybook_files/application.js"></script>
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="B/jJrZjnc9fhZTBoekXHfoz7h6M4OBoDJLfr+4tk0mk=" name="csrf-token">
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul>
+    <li><a href="http://localhost:3000/users/edit">My Profile</a> </li>
+    <li><a data-method="DELETE" href="http://localhost:3000/users/sign_out" rel="nofollow">Exit</a> </li>
+</ul>   
+
+            <ul class="nav nav-list">
+              <li class="nav-header"></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <h1>Tasklist</h1>
+
+
+<h1><a href="http://localhost:3000/tasks/new">Create new task</a></h1>
+ 
+<table>
+  </table><table class="table">
+    </table><p><a href="http://localhost:3000/welcome/index">Back to Homepage</a></p><table class="table table-bordered">
+  <tbody><tr>
+    <th>Active Tasks</th>
+  </tr>
+ 
+   
+    <tr>
+      <td>Homework14</td>
+      <td>1) придать проекту няшный вид (будь то bootstrap, foundation, ваш собственный дизайн или что-то другое - на ваш выбор)
+
+2) залить проект на хероку
+2.1. поставить гем heroku
+2.2. создать приложение (выполнять в папке проекта)
+heroku apps:create app_name
+2.3. проверить, есть ли heroku remote:
+git remote -v
+2.4. поменять настройки для асетов в production.rb (см. лекцию № 15)
+
+2.5. пушим на хероку (там у нас будет ветка master):
+
+git push heroku master
+Работа с бд:
+Heroku использует бд PostgreSql (т.е. кто ее использует - все ок, кто нет - для production окружения нужно поставить гем 'pg')
+
+1. Создать бд (выполняется 1 раз для создания):
+heroku run rake db:create 
+2. Провести миграции (выполняется каждый раз после пуша миграций на хероку):
+heroku run rake db:migrate
+3. Чтоб создать начальные данные (к примеру, пользователя), можно воспользоваться файлом db/seeds.rb
+Для его запуска на хероку (предварительно он должен быть запушен) выполняем
+heroku run rake db:seed
+Если будут какие-то проблемы - пишите тут.
+ 
+P.S. не забывайте пушить на github. мастер обновляется, как обычно, по пул-реквесту мной.
+ 
+Дедлайн: 10.04.2014 17:00</td>
+      <td><a href="http://localhost:3000/tasks/57">Show</a></td>
+      <td><a href="http://localhost:3000/tasks/57/edit">Edit</a></td>
+      <td><a data-confirm="Tu uveren?" data-method="delete" href="http://localhost:3000/tasks/57" rel="nofollow">Delete</a></td>
+    </tr>
+    <tr>
+      <td>isdhfjsdoighspgjpsdgksdg</td>
+      <td>sdfgsdfgksd;flksdfl;kbmsfdb</td>
+      <td><a href="http://localhost:3000/tasks/58">Show</a></td>
+      <td><a href="http://localhost:3000/tasks/58/edit">Edit</a></td>
+      <td><a data-confirm="Tu uveren?" data-method="delete" href="http://localhost:3000/tasks/58" rel="nofollow">Delete</a></td>
+    </tr>
+    <tr>
+      <td>ghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</td>
+      <td>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</td>
+      <td><a href="http://localhost:3000/tasks/59">Show</a></td>
+      <td><a href="http://localhost:3000/tasks/59/edit">Edit</a></td>
+      <td><a data-confirm="Tu uveren?" data-method="delete" href="http://localhost:3000/tasks/59" rel="nofollow">Delete</a></td>
+    </tr>
+  
+  </tbody></table><table border="5">
+</table>
+
+        </div>
+      </div><!--/row-->
+
+      <footer>
+        <p>© G-man 2014</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  
+
+
+
+</body></html>
