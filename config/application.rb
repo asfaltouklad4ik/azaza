@@ -10,6 +10,7 @@ Bundler.require(:default, Rails.env)
 module TaskManager
   class Application < Rails::Application
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

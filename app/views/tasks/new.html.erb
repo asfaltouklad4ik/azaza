@@ -5,6 +5,15 @@
   <%= f.input :textdescription %>
   <%= f.association :category %>
   <%= f.input :priority %>
-  <%= f.button :submit %>
+
+  <div class="form-actions">
+  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="button" class="btn">Cancel</button>
+</div>
 <% end %>
 <%= link_to 'Go back', tasks_path %>
+
+
+
+
+

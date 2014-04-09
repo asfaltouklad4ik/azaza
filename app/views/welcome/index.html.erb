@@ -1,10 +1,10 @@
 <center>
   <p>Task-manager/organizer v. 0.0.2</p>
-  <h1><%= link_to "Менеджер задач", controller: "tasks" %></h1>
+  <h1><%= link_to "Daybook", controller: "tasks" %></h1>
     <% if user_signed_in? %>
-      <span>Здравствуйте, <%= current_user.email %></span>
-      <%= link_to 'Выйти', destroy_user_session_path, :method => :DELETE %>
+      <span>Hi, <%= current_user.email %></span>
+      <%= link_to 'Exit', destroy_user_session_path, :method => :DELETE %>
     <% else %>
-  <p>Войдите или зарегистрируйтесь</p>
+  <p>Enter or register please</p>
 </center>
 <% end %>

@@ -6,12 +6,14 @@ gem 'simple_form'
 gem 'rails_admin'
 gem 'heroku'
 gem 'pg'
+gem 'font-awesome-less'
 #gem 'dynamic_form'
 #gem 'jquery-validation-rails'
 gem 'cancancan'
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+gem 'bootstrap-sass', '2.3.2.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
