@@ -6,7 +6,7 @@ gem 'psych'
 gem 'simple_form'
 gem 'rails_admin'
 gem 'heroku'
-gem 'pg'
+gem 'pg', group: :production
 gem 'font-awesome-less'
 gem 'thread_safe', '0.3.3'
 #gem 'dynamic_form'
