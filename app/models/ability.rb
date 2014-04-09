@@ -6,7 +6,7 @@ class Ability
     if user.role == "admin"
       can :manage, :all
     else  
-      can [:read, :create, :update, :destroy]
+      can :manage, :all
     end
   end
 
