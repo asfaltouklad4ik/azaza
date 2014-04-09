@@ -16,7 +16,7 @@ gem "twitter-bootstrap-rails"
 gem 'bootstrap-sass', '2.3.2.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'devise'
 gem 'activerecord'
 # Use SCSS for stylesheets
