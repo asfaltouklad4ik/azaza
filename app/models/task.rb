@@ -2,8 +2,8 @@ class Task < ActiveRecord::Base
   belongs_to :category
   has_many :assignments
   has_many :users, through: :assignments
-  validates :name, :textdescription, presence: true
-  validates_length_of :textdescription,
+  validates :name, :description, presence: true
+  validates_length_of :description,
     :minimum   => 10,
     :maximum   => 50000,
     :too_short => "minimum is 10 symbols",

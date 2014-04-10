@@ -38,13 +38,12 @@ ActiveRecord::Schema.define(version: 20140406200100) do
     t.string   "name"
     t.datetime "time_in"
     t.datetime "time_out"
-    t.string   "description"
+    t.text     "description"
     t.integer  "status"
     t.integer  "priority"
     t.datetime "create_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "textdescription"
   end
 
   create_table "users", force: true do |t|
@@ -60,8 +59,6 @@ ActiveRecord::Schema.define(version: 20140406200100) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "full_name"
-    t.string   "name"
     t.string   "role"
     t.string   "surname"
   end
