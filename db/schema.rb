@@ -11,40 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406200100) do
-
-  create_table "assignments", force: true do |t|
-    t.integer  "tasks_id"
-    t.integer  "users_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140411093032) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "roles", force: true do |t|
+  create_table "events", force: true do |t|
     t.string   "name"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "events", ["category_id"], name: "index_events_on_category_id"
 
   create_table "tasks", force: true do |t|
-    t.integer  "category_id"
+    t.integer  "user_id"
+    t.integer  "event_id"
     t.string   "name"
-    t.datetime "time_in"
-    t.datetime "time_out"
     t.text     "description"
-    t.integer  "status"
+    t.datetime "deadline"
+    t.string   "status"
     t.integer  "priority"
-    t.datetime "create_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "tasks", ["event_id"], name: "index_tasks_on_event_id"
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -59,21 +56,9 @@ ActiveRecord::Schema.define(version: 20140406200100) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role"
-    t.string   "surname"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-
-  create_table "users_roles", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "role_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "users_roles", ["role_id"], name: "index_users_roles_on_role_id"
-  add_index "users_roles", ["user_id"], name: "index_users_roles_on_user_id"
 
 end

@@ -1,0 +1,17 @@
+<%= simple_nested_form_for @event do |f| %>
+  <%= f.input :name %>
+  <%= f.association :category %>
+
+  <%= f.fields_for :tasks do |task_form| %>
+    <% if task_form.object.new_record? %>
+      <%= task_form.input :name %>
+      <%= task_form.input :description, as: :text %>
+      <%= task_form.input :deadline %>
+      <%= task_form.input :priority %>
+      <%= task_form.link_to_remove "Delete" %>
+    <% end %>
+  <% end %>
+  <p><%= f.link_to_add "Make new task", :tasks %></p>
+  <%= f.submit %>
+<% end %>
+<br><%=link_to_function "Back", "history.back()" %></br>

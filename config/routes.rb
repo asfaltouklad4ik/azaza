@@ -3,11 +3,20 @@ TaskManager::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :users
   get "welcome/index"
-  resources :tasks
+
+
+  resources :events do
+    resources :tasks, only: [:index, :new, :create]
+  end
+
+  resources :tasks, only: [] do
+    patch :assign, on: :member
+  end
+
+
   resources :categories
   resources :admin
-  resources :assignments
-  #resources :users
+  
   
 
   # The priority is based upon order of creation: first created -> highest priority.

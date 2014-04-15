@@ -1,9 +1,5 @@
 class User < ActiveRecord::Base
-	before_create :create_role
-	has_many :users_roles
-    has_many :roles, :through => :users_roles
-	has_many :tasks, through: :assignments, foreign_key: :user_id
-	
+	#before_create :create_role
 	#ROLES = %w[admin user]
   #def role?(base_role)
   #ROLES.index(base_role.to_s) <= ROLES.index(role)
@@ -13,8 +9,10 @@ class User < ActiveRecord::Base
     devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          validates :password, confirmation: true
-    private
-      def create_role
-      	self.roles << Role.find_by_name(:user)
-      end
+    #private
+     # def create_role
+     #   self.roles << Role.find_by_name(:user)
+      #end
+      has_many :events, foreign_key: :category_id
+      has_many :tasks, foreign_key: :user_id
 end

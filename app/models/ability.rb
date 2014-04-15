@@ -2,13 +2,10 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new
-    if user.role == "admin"
-      can :manage, :all
-    else  
-      can :manage, :all
-    end
+    can [:read, :create], Event
+    can [:update, :destroy], Event, owner: user
   end
+end
 
 
 
@@ -38,4 +35,3 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/bryanrite/cancancan/wiki/Defining-Abilities
-end

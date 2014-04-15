@@ -1,0 +1,27 @@
+<table class='table'>
+  <thead>
+    <tr>
+      <th><%= Event.human_attribute_name(:name) %></th>
+      <th><%= Event.human_attribute_name(:category) %></th>
+      <th>You can</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |p| %>
+      <tr>
+        <td><%= link_to p.name, event_path(p) %></td>
+        <td><%= p.category %></td>
+        <td>
+            <b><%= link_to 'Edit', edit_event_path(p) %></b>  or   
+
+            <b><%= link_to 'delete', event_path(p), method: :delete, data: { confirm: 'Seriously?' } %></b>
+            <br>and view
+            <b><%= link_to 'tasks', event_tasks_path(p) %></b> for current event</br>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Create new event', new_event_path, class: 'btn' %>
+<br><%=link_to_function "Back", "history.back()" %></br>
